@@ -1,0 +1,25 @@
+# OS/editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Archives / binaries / huge things
+*.iso
+*.ova
+*.vmdk
+*.zip
+*.7z
+*.mp4
+*.mkv
+*.mp3
+
+# Secrets (NEVER commit these)
+*.key
+*.crt
+*.pem
+*.pfx
+.env
+secrets/

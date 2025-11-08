@@ -23,3 +23,5 @@ Thumbs.db
 *.pfx
 .env
 secrets/
+# VirtualBox VM files
+*.vdi

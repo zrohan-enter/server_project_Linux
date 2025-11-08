@@ -25,3 +25,6 @@ Thumbs.db
 secrets/
 # VirtualBox VM files
 *.vdi
+
+# Ignore the entire Virtual Machine folder
+ServerVM/

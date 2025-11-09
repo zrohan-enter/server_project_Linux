@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zawed Server Dashboard - Fully Secured</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Font (Inter) -->
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0d1117; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#2563eb',
+                        'secondary-gray': '#1e293b',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen text-gray-100 p-4 md:p-10">
+
+    <div class="max-w-4xl mx-auto space-y-10">
+
+        <!-- Header -->
+        <header class="text-center pt-8 pb-4">
+            <h1 class="text-4xl font-extrabold text-primary-blue sm:text-5xl tracking-tight">
+                Secure Multi-Service Linux Server
+            </h1>
+            <p class="mt-3 text-xl text-gray-400">Project CSE 323 - Hosted on 192.168.0.123</p>
+        </header>
+
+        <!-- Service Status Grid -->
+        <section class="grid md:grid-cols-2 gap-6">
+            
+            <!-- Service Card: SSH -->
+            <div class="bg-secondary-gray p-6 rounded-xl shadow-2xl border-l-4 border-green-500">
+                <h2 class="text-2xl font-bold mb-2">SSH Access (Remote Admin)</h2>
+                <p class="text-gray-400 mb-3">Secure, key-only shell access.</p>
+                <p class="font-mono text-sm bg-gray-700 p-2 rounded-lg break-words">
+                    Status: <span class="text-green-400 font-semibold">Active (Key-Only)</span>
+                    <br>Port: 2222
+                </p>
+            </div>
+
+            <!-- Service Card: FTP -->
+            <div class="bg-secondary-gray p-6 rounded-xl shadow-2xl border-l-4 border-green-500">
+                <h2 class="text-2xl font-bold mb-2">FTP Server (File Transfer)</h2>
+                <p class="text-gray-400 mb-3">Secure file transfer with chroot user isolation.</p>
+                <p class="font-mono text-sm bg-gray-700 p-2 rounded-lg break-words">
+                    Status: <span class="text-green-400 font-semibold">Active (Chroot Jail)</span>
+                    <br>Port: 21 (Passive Range: 30000-30049)
+                </p>
+            </div>
+
+            <!-- Service Card: Samba -->
+            <div class="bg-secondary-gray p-6 rounded-xl shadow-2xl border-l-4 border-green-500">
+                <h2 class="text-2xl font-bold mb-2">Samba Share (Windows Integration)</h2>
+                <p class="text-gray-400 mb-3">Private file share accessible via Windows File Explorer.</p>
+                <p class="font-mono text-sm bg-gray-700 p-2 rounded-lg break-words">
+                    Access: <span class="text-primary-blue font-semibold">\\192.168.0.123\zawedshare</span>
+                </p>
+            </div>
+
+            <!-- Service Card: Jellyfin -->
+            <div class="bg-secondary-gray p-6 rounded-xl shadow-2xl border-l-4 border-green-500">
+                <h2 class="text-2xl font-bold mb-2">Jellyfin Media Streamer</h2>
+                <p class="text-gray-400 mb-3">Web-based video/audio streaming service.</p>
+                <p class="font-mono text-sm bg-gray-700 p-2 rounded-lg break-words">
+                    Access: <a href="http://192.168.0.123:8096" target="_blank" class="text-yellow-400 hover:underline">http://192.168.0.123:8096</a>
+                </p>
+            </div>
+            
+        </section>
+
+        <!-- Configuration Links -->
+        <section class="pt-6">
+            <h2 class="text-3xl font-semibold mb-4 text-primary-blue">Configuration & Validation</h2>
+            <div class="flex flex-wrap gap-4">
+                <a href="https://192.168.0.123/about" class="bg-primary-blue hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition duration-150">
+                    Apache / HTTPS Test
+                </a>
+                <a href="https://github.com/zrohan-enter/server_project_Linux" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white font-medium py-3 px-6 rounded-lg transition duration-150">
+                    View Project Documentation (GitHub)
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-10 pt-4 text-center text-gray-500 text-sm border-t border-gray-700">
+            &copy; 2025 Zawed Server Project. All services active via UFW.
+        </footer>
+    </div>
+
+</body>
+</html>
